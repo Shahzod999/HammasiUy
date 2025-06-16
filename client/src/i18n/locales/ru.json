@@ -1,0 +1,28 @@
+{
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно"
+  },
+  "auth": {
+    "login": "Войти",
+    "logout": "Выйти",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "loginError": "Неверное имя пользователя или пароль"
+  },
+  "navigation": {
+    "home": "Главная",
+    "profile": "Профиль"
+  },
+
+  "home": {
+    "welcome": "Добро пожаловать",
+    "openMenu": "Открыть меню"
+  },
+  "settings": {
+    "languages": "Языки",
+    "errorGeolocation": "Ошибка получения геолокации.",
+    "turnOnlocation": "Нажмите чтобы включить локацию"
+  }
+}

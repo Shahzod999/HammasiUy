@@ -1,0 +1,48 @@
+// CompanyForm.scss
+.company-form {
+    padding: 16px;
+    background: var(--secondary-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: max(calc(95vh - var(--total-height)), 75px);
+
+    input,
+    textarea {
+        padding: 12px;
+        border: 1px solid var(--separator-color);
+        border-radius: 10px;
+        font-size: 14px;
+        width: 100%;
+        resize: none;
+        background-color: transparent;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        line-height: 131%;
+        letter-spacing: -0.02em;
+
+        &:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+    }
+
+    textarea {
+        min-height: 80px;
+    }
+
+    .image-upload {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 133%;
+        color: var(--hint-color);
+
+        input[type="file"] {
+            display: none;
+        }
+    }
+}

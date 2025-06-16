@@ -1,0 +1,87 @@
+.lang {
+    padding: 16px;
+    height: 100%;
+    background-color: var(--bg-color);
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 16px;
+        font-family: var(--second-family);
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--text-color);
+        padding-bottom: 8px;
+        border-bottom: 0.5px solid var(--separator-color);
+    }
+
+    .langBox {
+        background-color: var(--bg-secondary-color);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 0.5px dotted var(--separator-color);
+
+        &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .tabs {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: var(--bg-hover-color);
+            }
+
+            &:active {
+                background-color: var(--bg-active-color);
+            }
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            strong {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.25;
+                color: var(--text-primary-color);
+            }
+
+            span {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.4;
+                color: var(--text-secondary-color);
+            }
+
+            svg {
+                width: 25px;
+                height: 25px;
+                fill: var(--button-color);
+                margin-right: 16px;
+            }
+
+            &:not(:last-child):after {
+                content: "";
+                position: absolute;
+                left: 20px;
+                right: 20px;
+                bottom: 0;
+                height: 1px;
+                background-color: var(--separator-color);
+                opacity: 0.3;
+            }
+        }
+    }
+}

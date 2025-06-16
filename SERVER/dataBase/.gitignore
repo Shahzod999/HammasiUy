@@ -1,0 +1,5 @@
+# Игнорировать файлы и папки MongoDB
+*
+!.gitignore
+!init-mongo.js
+!Dockerfile 

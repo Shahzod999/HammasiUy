@@ -1,0 +1,28 @@
+{
+    "common": {
+      "loading": "Юкланмоқда...",
+      "error": "Хатолик",
+      "success": "Муваффақиятли"
+    },
+    "auth": {
+      "login": "Кириш",
+      "logout": "Чиқиш",
+      "username": "Фойдаланувчи номи",
+      "password": "Парол",
+      "loginError": "Нотўғри фойдаланувчи номи ёки парол"
+    },
+    "navigation": {
+      "home": "Бош саҳифа",
+      "profile": "Профиль"
+    },
+
+    "home": {
+      "welcome": "Хуш келибсиз",
+      "openMenu": "Менюни очиш"
+    },
+    "settings": {
+      "languages": "Тиллар",
+      "errorGeolocation": "Геолокацияни олишда хатолик.",
+      "turnOnlocation": "Босиб, жойлашувни ёқинг"
+    }
+  }

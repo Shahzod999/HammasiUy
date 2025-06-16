@@ -1,0 +1,164 @@
+$bgColor: rgba(255, 255, 255, 0.9);
+$secondBgColor: rgba(51, 51, 51, 0.51);
+
+.custom-swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.fullscreen {
+    img {
+      border-radius: 0;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain !important;
+    }
+
+    .custom-pagination {
+      bottom: max(50px, var(--tg-content-safe-area-inset-bottom));
+    }
+
+    .custom-zoom-container {
+      cursor: zoom-in;
+    }
+  }
+
+  .custom-swiper-video {
+    pointer-events: none;
+  }
+
+  .custom-swiper-video::-webkit-media-controls-panel {
+    display: none !important;
+  }
+
+  .custom-swiper-video::-webkit-media-controls-play-button {
+    display: block !important;
+  }
+
+  .custom-swiper-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .custom-swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .custom-zoom-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .custom-lazy-preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 42px;
+    height: 42px;
+    margin-left: -21px;
+    margin-top: -21px;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0.2;
+    animation: custom-preloader-spin 1s infinite linear;
+    transform-origin: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #fff;
+    }
+  }
+
+  @keyframes custom-preloader-spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0 16px;
+  }
+
+  .custom-pagination-bullet {
+    flex: 1;
+    position: relative;
+    height: 10px;
+    text-align: left;
+
+    margin-right: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    i {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $secondBgColor;
+      border-radius: 20px;
+    }
+
+    b {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: $bgColor;
+      border-radius: 20px;
+    }
+  }
+
+  .custom-pagination-bullet-active {
+    b {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes countingBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

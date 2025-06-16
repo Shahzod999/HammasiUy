@@ -1,0 +1,29 @@
+{
+    "common": {
+      "loading": "Yuklanmoqda...",
+      "error": "Xatolik",
+      "success": "Muvaffaqiyatli"
+    },
+    "auth": {
+      "login": "Kirish",
+      "logout": "Chiqish",
+      "username": "Foydalanuvchi nomi",
+      "password": "Parol",
+      "loginError": "Noto‘g‘ri foydalanuvchi nomi yoki parol"
+    },
+    "navigation": {
+      "home": "Bosh sahifa",
+      "profile": "Profil"
+    },
+
+    "home": {
+      "welcome": "Xush kelibsiz",
+      "openMenu": "Menyuni ochish"
+    },
+    "settings": {
+      "languages": "Tillar",
+      "errorGeolocation": "Geolokatsiyani olishda xatolik.",
+      "turnOnlocation": "Bosib, joylashuvni yoqing"
+    }
+  }
+  

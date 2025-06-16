@@ -1,0 +1,89 @@
+.tab-bar {
+    border-top: 0.7px solid var(--separator-color);
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 4px 0;
+    padding-bottom: max(20px, var(--tg-content-safe-area-inset-bottom, 20px));
+
+    &__item {
+        flex: 1;
+        display: grid;
+        grid-template-rows: 25px 1fr;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 4px 0;
+        border-radius: 10px;
+
+
+        .heartSvg {
+            path {
+                fill: #e53935;
+            }
+        }
+
+        &__active {
+            background-color: rgba(255, 128, 0, 0.1);
+
+            svg {
+                fill: var(--main-color);
+                stroke: var(--main-color);
+            }
+
+            color: var(--main-color);
+        }
+
+        span {
+            font-size: 12px;
+            grid-row: 2;
+            font-family: var(--font-family);
+            font-weight: 500;
+            line-height: 143%;
+            letter-spacing: -0.01em;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+
+        &__icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        &__addIcon {
+            width: 35px;
+            height: 35px;
+            grid-row: span 2;
+        }
+    }
+}
+
+
+
+
+
+.price-anim {
+    transition: transform 0.5s ease;
+
+    animation: bounceScale 0.5s ease-out;
+}
+
+@keyframes bounceScale {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.3);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

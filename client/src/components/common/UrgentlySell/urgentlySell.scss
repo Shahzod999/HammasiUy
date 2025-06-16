@@ -1,0 +1,21 @@
+.urgently-sell__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  background-color: #e53935;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,8 @@
+.swipeableItem {
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    user-select: none;
+    will-change: transform;
+}

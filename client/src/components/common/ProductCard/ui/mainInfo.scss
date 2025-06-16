@@ -1,0 +1,35 @@
+.homeCardhighlights {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2px;
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .highlight-item {
+        display: grid;
+        grid-template-columns: 16px 1fr;
+        align-items: center;
+        white-space: nowrap;
+        gap: 4px;
+        padding: 6px 10px;
+        border-radius: 6px;
+
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--text-color);
+        }
+
+        span {
+            grid-column: 2;
+            font-size: 13px;
+            font-weight: 500;
+        }
+    }
+
+}

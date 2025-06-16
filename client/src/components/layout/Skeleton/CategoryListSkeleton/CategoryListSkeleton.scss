@@ -1,0 +1,26 @@
+.category-list-skeleton {
+    position: relative;
+    overflow: hidden;
+
+    .badge,
+    .skeleton-text {
+        background-color: var(--separator-color) !important;
+        position: relative;
+    }
+
+    .badge {
+        width: 33px;
+        height: 33px;
+    }
+
+    .skeleton-text {
+        height: 12px;
+        width: 80%;
+        border-radius: 4px;
+    }
+
+    .property-card__description.skeleton-text {
+        width: 100%;
+        height: 10px;
+    }
+}

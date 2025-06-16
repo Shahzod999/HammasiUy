@@ -1,0 +1,24 @@
+.add-new-product {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    overflow: scroll;
+
+    &__container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .header-title {
+        padding: 0 16px;
+    }
+}
+
+.editProduct {
+    overflow: scroll;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.main-new-product {
+    padding: 0 16px;
+}

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./SERVER
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URL=mongodb://mongodb:27017/hammasiUy
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  client:
+    build:
+      context: ./CLIENT
+      dockerfile: Dockerfile
+    ports:
+      - "1995:1995"
+    environment:
+      - VITE_API_URL=http://localhost:3000
+    depends_on:
+      - server
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./SERVER/dataBase:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongodb_data: 
