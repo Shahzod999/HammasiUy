@@ -21,7 +21,12 @@ const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:1995", "https://gxfl20sh-1995.euw.devtunnels.ms", "https://your-frontend-app.vercel.app"];
+const allowedOrigins = [
+  "http://localhost:1995",
+  "https://gxfl20sh-1995.euw.devtunnels.ms",
+  "https://your-frontend-app.vercel.app",
+  "https://hammasiuy.com",
+];
 
 app.use(
   cors({
