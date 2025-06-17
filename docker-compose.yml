@@ -13,18 +13,20 @@ services:
     depends_on:
       - mongodb
     restart: unless-stopped
+    networks:
+      - app-network
 
   client:
     build:
-      context: ./CLIENT
+      context: ./client
       dockerfile: Dockerfile
     ports:
-      - "1995:1995"
-    environment:
-      - VITE_API_URL=http://localhost:3000
+      - "80:80"
     depends_on:
       - server
     restart: unless-stopped
+    networks:
+      - app-network
 
   mongodb:
     image: mongo:latest
@@ -33,6 +35,12 @@ services:
     volumes:
       - ./SERVER/dataBase:/data/db
     restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
 
 volumes:
   mongodb_data: 
