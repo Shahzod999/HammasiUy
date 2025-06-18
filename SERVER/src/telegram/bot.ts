@@ -2,7 +2,7 @@ import TelegramBot from "node-telegram-bot-api";
 
 const botStart = async () => {
   const token = process.env.TELEGRAM_BOT_TOKEN || "";
-const webAppUrl = "https://hammasiuy.com/";
+  const webAppUrl = "https://hammasiuy.com";
 
   const bot = new TelegramBot(token, { polling: true });
 
@@ -30,7 +30,7 @@ const webAppUrl = "https://hammasiuy.com/";
         await bot.sendMessage(chatId, "круто ниже кнопка на сайт", {
           reply_markup: {
             inline_keyboard: [
-              [{ text: "Перейти на сайт ", web_app: { url: webAppUrl } }],
+              [{ text: "Перейти на сайт", web_app: { url: webAppUrl } }],
             ],
           },
         });
