@@ -6,7 +6,7 @@
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
-    // "skipLibCheck": true,
+    "skipLibCheck": true,
     //  Осторожно: если skipLibCheck: true, TypeScript может пропустить реальные ошибки в типах библиотек.
     "moduleResolution": "node"
   },
