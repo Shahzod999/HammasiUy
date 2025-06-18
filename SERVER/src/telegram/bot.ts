@@ -2,7 +2,7 @@ import TelegramBot from "node-telegram-bot-api";
 
 const botStart = async () => {
   const token = process.env.TELEGRAM_BOT_TOKEN || "";
-  const webAppUrl = "https://gxfl20sh-1995.euw.devtunnels.ms/";
+const webAppUrl = "https://hammasiuy.com/";
 
   const bot = new TelegramBot(token, { polling: true });
 
